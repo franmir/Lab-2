@@ -1,6 +1,12 @@
 #! /usr/bin/env python
 from SimpleCV import Image,Camera
 
-cam = Camera ()
-img=cam.getImage()
-img.save("FrKa.jpg")
+c = Camera ()
+img=c.getImage()
+img.save("Lab2.jpg")
+img.show
+imgGray=img.grayscale()
+imgGray.save("grayLab2")
+imgGray.show()
+hist=imgGray.histogram()
+plot(hist)
